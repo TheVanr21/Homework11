@@ -15,4 +15,13 @@ public class Smartphone extends Product {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    @Override
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        } else {
+            return brand.contains(search);
+        }
+    }
 }
